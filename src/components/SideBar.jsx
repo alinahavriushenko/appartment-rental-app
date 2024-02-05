@@ -1,7 +1,7 @@
 let SideBar = () => {
   return (
     <>
-      <h1>this is SideBar</h1>
+      <h2>this is SideBar</h2>
     </>
   );
 };
