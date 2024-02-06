@@ -8,7 +8,9 @@ function App() {
     <>
       <Header />
       <SideBar />
-      <List />
+      <div className="listWrapper">
+        <List />
+      </div>
       <Footer />
     </>
   );

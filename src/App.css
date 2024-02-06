@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
 }
+.listWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
 h1 {
   text-align: center;
 }
@@ -54,4 +58,16 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.listContainer {
+  margin: 5px;
+  border: 2px solid black;
+}
+.imgContainer {
+  width: 30vw;
+  height: 20vh;
+  display: flex;
+}
+.imgContainer img {
+  object-fit: contain;
 }
