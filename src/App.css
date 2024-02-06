@@ -9,6 +9,10 @@
 h1 {
   text-align: center;
 }
+p {
+  padding: 0;
+  margin: 0;
+}
 .topSection {
   display: flex;
   flex-direction: column;
@@ -61,13 +65,65 @@ h1 {
 }
 .listContainer {
   margin: 5px;
-  border: 2px solid black;
-}
-.imgContainer {
-  width: 30vw;
-  height: 20vh;
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
+  width: 30vw;
+  background-color: rgb(241, 241, 241);
+}
+
+.icon {
+  width: 25px;
+  opacity: 0.7;
+  transition: 0.2s ease-in-out;
+  object-fit: contain;
+}
+
+.icon.delete {
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.icon.delete:hover {
+  opacity: 1;
+}
+
+.imgContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 .imgContainer img {
   object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.rowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.cardText {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: start;
+  height: 190px;
+  justify-content: space-between;
+}
+
+.cardText h3 {
+  text-align: left;
+  color: rgb(36, 36, 36);
+  margin: 5px 0;
 }
