@@ -1,5 +1,5 @@
 import rentals from "../../rentals.json";
-let MainData = () => {
+let List = () => {
   console.log(rentals.results);
   return (
     <>
@@ -7,4 +7,4 @@ let MainData = () => {
     </>
   );
 };
-export default MainData;
+export default List;
