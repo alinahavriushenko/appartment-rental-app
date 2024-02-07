@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import rentals from "../../rentals.json";
-
+import { useNavigate } from "react-router-dom";
 const List = () => {
   const [list, setList] = useState(rentals.results);
+  const navigate = useNavigate();
   let deleteBtn = (elemid) => {
     let newList = list.filter((elem) => {
       return elem.id !== elemid;
@@ -27,6 +28,7 @@ const List = () => {
           {/* {elem.neighbourhood && <p>{elem.neighbourhood}</p>} */}
           <p>accommodates: {elem.accommodates}</p>
           <p>{elem.price} $ / night</p>
+
           <img
             onClick={() => {
               deleteBtn(elem.id);
@@ -36,6 +38,13 @@ const List = () => {
           />
           {/* 🗑️ */}
         </div>
+        <button
+          onClick={() => {
+            navigate(`/details/${elem.id}`);
+          }}
+        >
+          one
+        </button>
       </div>
     );
   });
