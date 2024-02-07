@@ -4,6 +4,8 @@
 }
 .listWrapper {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 h1 {
@@ -70,7 +72,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 10px;
-  width: 30vw;
+  width: 20vw;
   background-color: rgb(241, 241, 241);
 }
 
