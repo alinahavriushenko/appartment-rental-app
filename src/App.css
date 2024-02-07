@@ -15,6 +15,11 @@ p {
   padding: 0;
   margin: 0;
 }
+a {
+  text-decoration: none;
+  color: rgb(26, 26, 26);
+}
+
 .topSection {
   display: flex;
   flex-direction: column;
@@ -74,6 +79,12 @@ p {
   border-radius: 10px;
   width: 20vw;
   background-color: rgb(241, 241, 241);
+  transition: 0.3s ease-in-out;
+}
+
+.listContainer:hover {
+  box-shadow: 7px 7px 5px rgba(155, 155, 155, 0.507);
+  transform: scale(1.05);
 }
 
 .icon {
@@ -86,6 +97,7 @@ p {
 .icon.delete {
   align-self: flex-end;
   cursor: pointer;
+  z-index: 100;
 }
 
 .icon.delete:hover {
@@ -100,6 +112,12 @@ p {
   justify-content: center;
   overflow: hidden;
 }
+
+.imgContainer img:hover {
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .imgContainer img {
   object-fit: contain;
   width: 100%;
@@ -132,8 +150,74 @@ p {
 }
 .detailsPageContainer {
   margin: 10px;
+}
+
+.detailsImageContainer {
+  width: 100vw;
+  height: 70vh;
+}
+
+.detailsImageContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  margin: 0 40px;
+}
+
+.detailsPageContainer p {
+  font-size: 22px;
+}
+
+/* .productInfoContainer {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+} */
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.lowerSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.lowerSection section {
+  display: flex;
+  flex-direction: row;
+}
+
+footer nav,
+footer section {
+  background-color: #fcba03;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  flex-direction: row-reverse;
+  height: 5vh;
+  font-size: 20px;
+}
+
+.hostCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background-color: palevioletred;
+  width: 25vw;
+  height: 20vh;
+}
+
+.hostImgContainer {
+  border: 1px solid black;
+  border-radius: 50px;
+}
+
+.hostImgContainer img {
+  width: 5vw;
+  height: 8vh;
+  object-fit: contain;
 }

@@ -15,7 +15,13 @@ const List = () => {
     return (
       <div key={elem.id} className="listContainer">
         <div className="imgContainer">
-          <img src={elem.picture_url.url} alt="productImg" />
+          <img
+            src={elem.picture_url.url}
+            alt="productImg"
+            onClick={() => {
+              navigate(`/details/${elem.id}`);
+            }}
+          />
         </div>
         <div className="cardText">
           <h3>{elem.name.toUpperCase()}</h3>
@@ -25,7 +31,6 @@ const List = () => {
               {elem.country}, {elem.city}
             </p>
           </div>
-          {/* {elem.neighbourhood && <p>{elem.neighbourhood}</p>} */}
           <p>accommodates: {elem.accommodates}</p>
           <p>{elem.price} $ / night</p>
 
@@ -38,13 +43,6 @@ const List = () => {
           />
           {/* 🗑️ */}
         </div>
-        <button
-          onClick={() => {
-            navigate(`/details/${elem.id}`);
-          }}
-        >
-          one
-        </button>
       </div>
     );
   });
