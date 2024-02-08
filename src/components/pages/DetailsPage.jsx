@@ -1,10 +1,9 @@
 import { useParams } from "react-router-dom";
-import rentals from "../../../rentals.json";
 import UserImg from "../../assets/img/User.png";
-
+import { newRentals } from "./Home";
 let DetailsPage = () => {
   const { productId } = useParams();
-  let currentProduct = rentals.results.find((elem) => {
+  let currentProduct = newRentals.find((elem) => {
     return elem.id == productId;
   });
 
@@ -33,13 +32,13 @@ let DetailsPage = () => {
           </section>
         </div>
         <section className="lowerSection">
-          <section>
+          <section style={{ display: "flex", justifyContent: "space-evenly" }}>
             <p>property_type: {currentProduct.property_type}</p>
             <p>accommodates: {currentProduct.accommodates}</p>
             <p>bedrooms: {currentProduct.bedrooms}</p>
             <p>bathrooms: {parseInt(currentProduct.bathrooms)}</p>
           </section>
-          <section>
+          <section style={{ display: "flex", justifyContent: "space-evenly" }}>
             <p>price: {currentProduct.price} $ / night</p>
             <p>cleaning_fee: {currentProduct.cleaning_fee}</p>
             <p>cancellation_policy: {currentProduct.cancellation_policy}</p>
@@ -47,7 +46,7 @@ let DetailsPage = () => {
         </section>
         <hr />
       </div>
-      <section className="productFullDescroption">
+      <section className="productFullDescription">
         <p>{currentProduct.space}</p>
         <hr />
         <p>{currentProduct.description}</p>

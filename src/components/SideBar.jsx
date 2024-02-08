@@ -1,18 +1,5 @@
+/* eslint-disable react/prop-types */
 let SideBar = (props) => {
-  /*
-   let variable = { name="host_name"
-    name="country"
-    name="city"
-    name="property_type"
-    name="accommodates"
-    name="bathrooms"
-    name="bedrooms"
-    name="price"
-    name="description"
-    name="house_rules"
-    name="cleaning_fee"}
-  */
-
   return (
     <>
       <form className="addProduct" onSubmit={props.handleSubmit}>
@@ -145,6 +132,16 @@ let SideBar = (props) => {
             name="cleaning_fee"
             onChange={(e) => {
               props.setCleaningFee(e.target.value);
+            }}
+          ></input>
+        </label>
+        <label>
+          Add Image
+          <input
+            type="text"
+            placeholder="Image"
+            onChange={(e) => {
+              props.setUrl(e.target.value);
             }}
           ></input>
         </label>

@@ -1,5 +1,15 @@
 import { Link } from "react-router-dom";
+import { newRentals } from "./pages/Home";
+import { useState } from "react";
 let Header = () => {
+  const [srchName, setSrchName] = useState(" ");
+  let handleSearchSubmit = (e) => {
+    e.preventDefault();
+    newRentals.find((elem) => {
+      return elem.city == srchName;
+    });
+  };
+
   return (
     <>
       <div className="topSection">
@@ -15,27 +25,18 @@ let Header = () => {
         </nav>
       </div>
       <div className="searchFormContainer">
-        <form
-          className="searchForm"
-          onSubmit={() => {
-            location.href("#");
-          }}
-        >
+        <form className="searchForm" onSubmit={handleSearchSubmit}>
           <label>search</label>
-          <input type="text"></input>
+          <input
+            type="text"
+            name="srchName"
+            onChange={(e) => {
+              setSrchName(e.target.value);
+            }}
+          ></input>
           <button type="submit">submit</button>
         </form>
       </div>
-      {/* <form
-        onSubmit={() => {
-          location.href("#");
-        }}
-      >
-        <label>Email</label>
-        <input type="email"></input>
-        <label>Password</label>
-        <input type="password"></input>
-      </form> */}
     </>
   );
 };

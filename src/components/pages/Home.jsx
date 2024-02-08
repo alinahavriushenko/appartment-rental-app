@@ -2,6 +2,8 @@ import SideBar from "../SideBar";
 import List from "../List";
 import { useState } from "react";
 import rentals from "../../../rentals.json";
+import dummyImg from "../../assets/img/dummyImg.jpeg";
+export let newRentals = rentals.results;
 
 let Home = () => {
   const [list, setList] = useState(rentals.results);
@@ -16,9 +18,8 @@ let Home = () => {
   const [description, setDescription] = useState("");
   const [house_rules, setHouseRules] = useState("");
   const [cleaning_fee, setCleaningFee] = useState(0);
-  const [url, setUrl] = useState(
-    "https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/airbnb-listings/files/9a1168a0abcb0aca0512010b156ac61e"
-  );
+  const [url, setUrl] = useState(dummyImg);
+
   let handleSubmit = (e) => {
     e.preventDefault();
     let mappedList = list.map((elem) => {
@@ -54,6 +55,7 @@ let Home = () => {
     setDescription("");
     setHouseRules("");
     setCleaningFee(0);
+    newRentals = [newApartment, ...list];
   };
   return (
     <>
@@ -70,6 +72,7 @@ let Home = () => {
         setHouseRules={setHouseRules}
         setCleaningFee={setCleaningFee}
         handleSubmit={handleSubmit}
+        setUrl={setUrl}
       />
       <div className="listWrapper">
         <List list={list} setList={setList} />
