@@ -10,18 +10,27 @@ let DetailsPage = () => {
 
   return (
     <div className="detailsPageContainer">
-      <div className="detailsImageContainer">
-        <img src={currentProduct.picture_url.url} alt="product-image" />
-      </div>
+      {currentProduct.picture_url.url && (
+        <div className="detailsImageContainer">
+          <img src={currentProduct.picture_url.url} alt="product-image" />
+        </div>
+      )}
+
       <div className="productInfoContainer">
         <div className="topSection">
           <section>
             <p>{currentProduct.name}</p>
             <p>{currentProduct.city}</p>
             <p>{currentProduct.country}</p>
-            {currentProduct.neighbourhood && <p>{currentProduct.neighbourhood}</p>}
+            {currentProduct.neighbourhood && (
+              <p>{currentProduct.neighbourhood}</p>
+            )}
           </section>
-          <section>{currentProduct.review_scores_rating && <p>Rating: {currentProduct.review_scores_rating}</p>}</section>
+          <section>
+            {currentProduct.review_scores_rating && (
+              <p>Rating: {currentProduct.review_scores_rating}</p>
+            )}
+          </section>
         </div>
         <section className="lowerSection">
           <section>

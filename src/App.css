@@ -221,3 +221,8 @@ footer section {
   height: 8vh;
   object-fit: contain;
 }
+.addProduct {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

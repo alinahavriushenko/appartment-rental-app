@@ -8,6 +8,7 @@ import Faq from "./components/pages/Faq";
 import NotFound from "./components/pages/NotFound";
 import DetailsPage from "./components/pages/DetailsPage";
 import { Route, Routes } from "react-router-dom";
+
 function App() {
   return (
     <>
