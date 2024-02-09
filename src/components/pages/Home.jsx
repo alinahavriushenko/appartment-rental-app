@@ -44,16 +44,16 @@ let Home = () => {
       },
     };
     setList([newApartment, ...list]);
-    setHostName("");
-    setCountry("");
-    setCity("");
-    setPropertyType("");
+    setHostName(" ");
+    setCountry(" ");
+    setCity(" ");
+    setPropertyType(" ");
     setAccommodates(0);
     setBathrooms(0);
     setBedrooms(0);
     setPrice(0);
-    setDescription("");
-    setHouseRules("");
+    setDescription(" ");
+    setHouseRules(" ");
     setCleaningFee(0);
     newRentals = [newApartment, ...list];
   };

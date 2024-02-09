@@ -3,7 +3,7 @@
   padding: 0;
 }
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
 }
 .listWrapper {
   display: flex;
@@ -250,4 +250,20 @@ footer section {
 .productFullDescription p {
   padding: 10px;
   width: 30vw;
+  font-weight: 800;
+  font-family: "Public Sans", sans-serif;
+}
+.hostCard .hostInfo p .hostCardInnerP {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Prompt", sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 800;
+  color: black;
+}
+.aboutInnerP {
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Prompt", sans-serif;
+  font-family: "Public Sans", sans-serif;
+  font-weight: 800;
+  color: black;
 }

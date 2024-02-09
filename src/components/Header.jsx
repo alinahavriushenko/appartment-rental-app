@@ -3,6 +3,7 @@ import { newRentals } from "./pages/Home";
 import { useState } from "react";
 let Header = () => {
   const [srchName, setSrchName] = useState(" ");
+
   let handleSearchSubmit = (e) => {
     e.preventDefault();
     newRentals.find((elem) => {

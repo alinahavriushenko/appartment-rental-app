@@ -1,8 +1,10 @@
 import { useParams } from "react-router-dom";
 import UserImg from "../../assets/img/User.png";
 import { newRentals } from "./Home";
+
 let DetailsPage = () => {
   const { productId } = useParams();
+
   let currentProduct = newRentals.find((elem) => {
     return elem.id == productId;
   });
@@ -59,9 +61,20 @@ let DetailsPage = () => {
           <img src={UserImg} />
         </section>
         <section className="hostInfo">
-          <p>Host: {currentProduct.host_name}</p>
-          <p>host_since{currentProduct.host_since}</p>
-          <p>host_response_time {currentProduct.host_response_time}</p>
+          <p>
+            Host:{" "}
+            <span className="hostCardInnerP">{currentProduct.host_name}</span>
+          </p>
+          <p>
+            host_since:{" "}
+            <span className="hostCardInnerP">{currentProduct.host_since}</span>
+          </p>
+          <p>
+            host_response_time:{" "}
+            <span className="hostCardInnerP">
+              {currentProduct.host_response_time}
+            </span>
+          </p>
         </section>
       </section>
     </div>
