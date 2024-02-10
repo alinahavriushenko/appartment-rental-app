@@ -1,6 +1,7 @@
 .body {
   margin: 0;
   padding: 0;
+  background-color: #fcfcfc;
 }
 p {
   font-family: "Bebas Neue", sans-serif;
@@ -42,21 +43,28 @@ a {
 }
 .navContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
+
+.navContainer h1 {
+  font-size: 80px;
+  color: #011627;
+}
 .nav-bar {
-  height: 5vh;
+  height: 10vh;
   width: 80vw;
-  background-color: red;
+  background-color: #011627;
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  font-weight: bold;
 }
 .nav-bar a {
   text-decoration: none;
   font-size: 25px;
+  color: aliceblue;
 }
 .searchFormContainer {
   display: flex;
@@ -215,26 +223,6 @@ footer section {
   margin: 20px 0;
 }
 
-.hostImgContainer {
-  border: 1px solid black;
-  border-radius: 50px;
-  display: flex;
-}
-
-.hostImgContainer img {
-  width: 5vw;
-  height: 8vh;
-  object-fit: contain;
-}
-.hostInfo {
-  display: flex;
-  flex-direction: column;
-}
-.addProduct {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 .productInfoContainer {
   margin: 20px;
 }
@@ -266,4 +254,115 @@ footer section {
   font-family: "Public Sans", sans-serif;
   font-weight: 800;
   color: black;
+}
+
+.hostImgContainer {
+  border-radius: 50px;
+  display: flex;
+}
+
+.hostImgContainer img {
+  width: 10vw;
+  height: 10vh;
+  object-fit: contain;
+}
+.hostInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.formContainer {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  margin: 50px 25px;
+  padding: 25px;
+  background-color: #a2bfcd;
+  border-radius: 15px;
+}
+.formContainer.show {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.iconAddAppartment {
+  border: none;
+  background-color: Transparent;
+  cursor: pointer;
+  margin-left: 8vw;
+  filter: invert(83%) sepia(45%) saturate(4623%) hue-rotate(341deg) brightness(102%) contrast(105%);
+  font-size: 18px;
+}
+
+.iconAddAppartment img {
+  width: 40px;
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
+}
+
+.iconAddAppartment img:hover {
+  transform: scale(1.1);
+}
+
+.addProduct {
+  display: flex;
+  width: 100%;
+  height: 30vh;
+  width: 90vw;
+  font-size: 20px;
+  justify-content: space-around;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.addProduct fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 10px;
+  border: 1px solid #011627;
+  border-radius: 15px;
+}
+
+.addProduct legend {
+  font-weight: bold;
+}
+
+.addProduct input,
+.addProduct textarea {
+  border-radius: 25px;
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+}
+
+.addProduct input {
+  min-width: 4vw;
+  max-width: 10vw;
+}
+
+.addProduct label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addProduct button {
+  border: none;
+  background: #011627;
+  box-shadow: inset -10px -10px 20px #000910, inset 10px 10px 20px #02233e;
+  color: #fcfcfc;
+  border-radius: 10px;
+  height: 7vh;
+  width: 10vw;
+  cursor: pointer;
+  align-self: end;
+  transition: 0.3s ease-in-out;
+}
+
+.addProduct button:hover {
+  border-radius: 10px;
+  background: #011627;
+  box-shadow: inset 10px 10px 20px #000910, inset -10px -10px 20px #02233e;
 }

@@ -13,19 +13,16 @@ let Header = () => {
 
   return (
     <>
-      <div className="topSection">
-        <h1>Logo Image</h1>
-        <button>Login</button>
-        <button>Sign Up</button>
-      </div>
-
       <div className="navContainer">
+        <Link to="/">
+          <h1>Rent.</h1>
+        </Link>
         <nav className="nav-bar">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
         </nav>
       </div>
-      <div className="searchFormContainer">
+      {/* <div className="searchFormContainer">
         <form className="searchForm" onSubmit={handleSearchSubmit}>
           <label>search</label>
           <input
@@ -37,7 +34,7 @@ let Header = () => {
           ></input>
           <button type="submit">submit</button>
         </form>
-      </div>
+      </div> */}
     </>
   );
 };
