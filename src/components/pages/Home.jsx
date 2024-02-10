@@ -3,6 +3,7 @@ import List from "../List";
 import { useState } from "react";
 import rentals from "../../../rentals.json";
 import dummyImg from "../../assets/img/dummyImg.jpeg";
+import TopProduct from "../TopProduct";
 export let newRentals = rentals.results;
 
 let Home = () => {
@@ -74,6 +75,7 @@ let Home = () => {
         handleSubmit={handleSubmit}
         setUrl={setUrl}
       />
+      <TopProduct list={list} />
       <div className="listWrapper">
         <List list={list} setList={setList} />
       </div>
