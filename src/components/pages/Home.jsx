@@ -9,8 +9,11 @@ export let newRentals = rentals.results;
 let Home = () => {
   const [list, setList] = useState(rentals.results);
   const [host_name, setHostName] = useState("");
+  const [host_since, setHostSince] = useState("");
+  const [host_response_time, setHostResponseTime] = useState("");
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
+  const [neighbourhood, setNeighbourhood] = useState("");
   const [property_type, setPropertyType] = useState("");
   const [accommodates, setAccommodates] = useState(0);
   const [bathrooms, setBathrooms] = useState(0);
@@ -30,8 +33,11 @@ let Home = () => {
     let newApartment = {
       id: result + 1,
       host_name: host_name,
+      host_since: host_since,
+      host_response_time: host_response_time,
       country: country,
       city: city,
+      neighbourhood: neighbourhood,
       property_type: property_type,
       accommodates: accommodates,
       bathrooms: bathrooms,
@@ -48,6 +54,7 @@ let Home = () => {
     setHostName(" ");
     setCountry(" ");
     setCity(" ");
+    setNeighbourhood("");
     setPropertyType(" ");
     setAccommodates(0);
     setBathrooms(0);
@@ -62,8 +69,12 @@ let Home = () => {
     <>
       <SideBar
         setHostName={setHostName}
+        setHostSince={setHostSince}
+        setHostResponseTime={setHostResponseTime}
+        host_response_time={host_response_time}
         setCountry={setCountry}
         setCity={setCity}
+        setNeighbourhood={setNeighbourhood}
         setPropertyType={setPropertyType}
         setAccommodates={setAccommodates}
         setBathrooms={setBathrooms}

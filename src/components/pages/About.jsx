@@ -24,23 +24,30 @@ let About = () => {
         <p>Description</p>
         <p>
           <span className="aboutInnerP">
-            Admin dashboard for the apartment rental platform where the admin
-            can see and manage the apartments shown on the platform.
+            Admin dashboard for the apartment rental platform where the admin can see and manage the apartments shown on the platform.
           </span>
         </p>
-        <div>
-          <span className="aboutInnerP">
-            <p>Linkdin</p>
-            <Link to="https://www.linkedin.com/in/pouria-pourgoshtasbi-744565246/">
-              Pouria Pourgoshtasbi
-            </Link>
-          </span>
-          <span className="aboutInnerP">
-            <p>GitHub</p>
-            <Link to="https://www.linkedin.com/in/pouria-pourgoshtasbi-744565246/">
-              Pouria Pourgoshtasbi
-            </Link>
-          </span>
+        <div className="aboutLinks">
+          <div>
+            <span className="aboutInnerP">
+              <p>Linkdin</p>
+              <Link to="https://www.linkedin.com/in/pouria-pourgoshtasbi-744565246/">Pouria Pourgoshtasbi</Link>
+            </span>
+            <span className="aboutInnerP">
+              <p>GitHub</p>
+              <Link to="https://www.linkedin.com/in/pouria-pourgoshtasbi-744565246/">Pouria Pourgoshtasbi</Link>
+            </span>
+          </div>
+          <div>
+            <span className="aboutInnerP">
+              <p>Linkdin</p>
+              <Link to="https://www.linkedin.com/in/alina-havriushenko/">Alina Havriushenko</Link>
+            </span>
+            <span className="aboutInnerP">
+              <p>GitHub</p>
+              <Link to="https://github.com/alinahavriushenko">Alina Havriushenko</Link>
+            </span>
+          </div>
         </div>
       </div>
     </div>
