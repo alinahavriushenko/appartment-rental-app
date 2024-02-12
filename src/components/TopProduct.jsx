@@ -1,22 +1,25 @@
 import { useState } from "react";
+import Next from "../assets/img/Right.png";
+import Prev from "../assets/img/Left.png";
 
 const TopProduct = (props) => {
-  const itemsPerPage = 5;
+  const itemsToShow = 5;
+  const [clickCounter, setClickCounter] = useState(0);
+  const topItems = props.list.filter(el => el.review_scores_rating > 90);
 
-  const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = Math.ceil(props.list.length / itemsPerPage);
-  const startIdx = (currentPage - 1) * itemsPerPage;
-  const endIdx = startIdx + itemsPerPage;
-  const displayedProducts = props.list.slice(startIdx, endIdx);
-
-  const handlePageChange = (newPage) => {
-    setCurrentPage(Math.max(1, Math.min(newPage, totalPages)));
+  const scrollItems = (direction) => {
+    if (direction === "prev" && clickCounter > 0) {
+      setClickCounter(clickCounter - 1);
+    } else if (direction === "next" && clickCounter < topItems.length - itemsToShow) {
+      setClickCounter(clickCounter + 1);
+    }
   };
 
   return (
-    <>
+    <div className="topChoice">
+      <h1>Top Choice</h1>
       <div style={{ display: "flex" }}>
-        {displayedProducts.map((elem) => (
+        {topItems.slice(clickCounter, clickCounter + itemsToShow).map((elem) => (
           <div
             key={elem.id}
             style={{
@@ -36,6 +39,7 @@ const TopProduct = (props) => {
                   height: "100%",
                   borderRadius: "30px",
                 }}
+                alt="product"
               />
               <div style={{ textAlign: "center" }}>
                 <p>{elem.name}</p>
@@ -57,21 +61,10 @@ const TopProduct = (props) => {
           margin: "20px",
         }}
       >
-        <button
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <span>{`Page ${currentPage} of ${totalPages}`}</span>
-        <button
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-        >
-          Next
-        </button>
+        <img src={Prev} className="icon arrow" alt="prev" onClick={() => scrollItems("prev")} />
+        <img src={Next} className="icon arrow" alt="next" onClick={() => scrollItems("next")} />
       </div>
-    </>
+    </div>
   );
 };
 

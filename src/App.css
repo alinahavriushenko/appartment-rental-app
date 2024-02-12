@@ -49,12 +49,12 @@ a {
 
 .navContainer h1 {
   font-size: 80px;
-  color: #011627;
+  color: #02233e;
 }
 .nav-bar {
-  height: 10vh;
+  height: 6vh;
   width: 80vw;
-  background-color: #011627;
+  background-color: #02233e;
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;
@@ -124,6 +124,12 @@ a {
 .icon.star {
   filter: invert(79%) sepia(35%) saturate(5035%) hue-rotate(2deg) brightness(107%) contrast(98%);
   width: 40px;
+}
+
+.icon.arrow {
+  cursor: pointer;
+  width: 30px;
+  padding: 30px 40px 0 40px;
 }
 
 .imgContainer {
@@ -362,7 +368,7 @@ footer a {
   border: none;
   background-color: Transparent;
   cursor: pointer;
-  margin-left: 8vw;
+  margin-left: 2vw;
   filter: invert(83%) sepia(45%) saturate(4623%) hue-rotate(341deg) brightness(102%) contrast(105%);
   font-size: 18px;
 }
@@ -452,4 +458,10 @@ footer a {
   align-items: center;
   justify-content: center;
   gap: 5vw;
+}
+
+.topChoice {
+  background-color: #ffa21f;
+  padding: 2vw;
+  margin: 3vw 0;
 }
