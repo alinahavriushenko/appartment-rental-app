@@ -86,6 +86,7 @@ let Home = () => {
         handleSubmit={handleSubmit}
         setUrl={setUrl}
       />
+      <h1 className="topChoiceTitle">Top choice</h1>
       <TopProduct list={list} />
       <div className="listWrapper">
         <List list={list} setList={setList} />

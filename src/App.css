@@ -181,7 +181,7 @@ a {
 
 .cardText h3 {
   text-align: left;
-  color: rgb(36, 36, 36);
+  color: rgb(19, 18, 18);
   margin: 5px 0;
   text-transform: uppercase;
 }
@@ -354,8 +354,8 @@ footer a {
   overflow: hidden;
   transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
   padding: 25px;
-  background-color: #a2bfcd;
   border-radius: 15px;
+  border: 5px solid #fcba03;
 }
 .formContainer.show {
   opacity: 1;
@@ -398,7 +398,7 @@ footer a {
   flex-direction: column;
   gap: 10px;
   padding-top: 10px;
-  border: 1px solid #011627;
+  border: 1px solid #a0a0a0;
   border-radius: 15px;
 }
 
@@ -411,7 +411,7 @@ footer a {
   border-radius: 25px;
   margin-left: 10px;
   padding: 5px;
-  border: none;
+  border: 1px solid #a0a0a0;
 }
 
 .addProduct input {
@@ -463,5 +463,13 @@ footer a {
 .topChoice {
   background-color: #ffa21f;
   padding: 2vw;
-  margin: 3vw 0;
+  margin-bottom: 5vw;
+  border-radius: 15px;
+}
+
+.topChoiceTitle {
+  text-transform: uppercase;
+  font-size: 40px;
+  color: #011627;
+  margin: 5px;
 }
